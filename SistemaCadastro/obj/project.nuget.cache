@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3VYFBsfY2M3lxfYL7Vtfjn48Jq8rHyq7sCdvIYRXKRSdd2j141T3u7fpKlIe9B8nddlAa0xpBwcEIp4b6qnWDg==",
+  "dgSpecHash": "4TKKc9nhZlowoM1DXda/cUZPGqckJMcvgi0npbhxehbUaLAWvuaNqDKF87TbJAeIaKVx+KKcMtJnOMeuUm3Lgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rafaela.pessoa\\source\\repos\\ProfitsConsulting\\TesteRafaela\\SistemaCadastro\\SistemaCadastro.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\rafaela.pessoa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
