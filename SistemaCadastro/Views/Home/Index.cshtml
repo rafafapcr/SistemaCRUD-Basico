@@ -1,8 +1,61 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Tela de Consulta";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Consulta</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Consulta de Documentos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Título</th>
+                <th scope="col">Revisão</th>
+                <th scope="col">Data Planejada</th>
+                <th scope="col">Valor</th>
+                <th scope="col">""</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <tr>
+                <th scope="row">Código 1</th>
+                <td>Título 1</td>
+                <td>Revisão 1</td>
+                <td>01/01/0101</td>
+                <td>R$1</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Home" asp-action="EditarDocumento">EDITAR</a>
+                        <a role="button" class="btn btn-outline-danger">APAGAR</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <th scope="row">Código 2</th>
+                <td>Título 2</td>
+                <td>Revisão 2</td>
+                <td>02/02/0202</td>
+                <td>R$2</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Home" asp-action="EditarDocumento">EDITAR</a>
+                        <a role="button" class="btn btn-outline-danger" >APAGAR</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Código 3</th>
+                <td>Título 3</td>
+                <td>Revisão 3</td>
+                <td>03/03/0303</td>
+                <td>R$3</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Home" asp-action="EditarDocumento">EDITAR</a>
+                        <a role="button" class="btn btn-outline-danger">APAGAR</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

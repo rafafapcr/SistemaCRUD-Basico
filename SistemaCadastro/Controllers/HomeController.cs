@@ -16,7 +16,7 @@ namespace SistemaCadastro.Controllers
             return View();
         }
 
-        public IActionResult Cadastro()
+        public IActionResult EditarDocumento()
         {
             return View();
         }
