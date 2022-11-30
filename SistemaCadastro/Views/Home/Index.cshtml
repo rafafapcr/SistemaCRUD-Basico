@@ -6,14 +6,14 @@
 <div class="text-center">
     <h1 class="display-4">Listar Documentos</h1>
     <br />
-    <table class="table">
+    <table class="table" id="TableDocumentos" style="text-align:left">
         <thead>
             <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Título</th>
                 <th scope="col">Revisão</th>
                 <th scope="col">Data Planejada</th>
-                <th scope="col">Valor (R$)</th>
+                <th scope="col">Valor</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -27,7 +27,7 @@
                         <td>@documento.Titulo</td>
                         <td>@documento.Revisao</td>
                         <td>@documento.DataPlanejada</td>
-                        <td> @documento.Valor</td>
+                        <td> @documento.Valor.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-br"))</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-outline-primary" asp-route-id="@documento.Id" asp-controller="Home" asp-action="EditarDocumento">EDITAR</a>

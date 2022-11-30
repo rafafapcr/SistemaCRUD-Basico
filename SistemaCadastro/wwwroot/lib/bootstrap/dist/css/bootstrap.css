@@ -218,7 +218,7 @@ caption {
 }
 
 th {
-  text-align: inherit;
+  text-align: left;
 }
 
 label {
@@ -1515,12 +1515,13 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   color: #212529;
+  text-align: start;
 }
 
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  text-align: left;
   border-top: 1px solid #dee2e6;
 }
 
@@ -9757,7 +9758,7 @@ button.bg-dark:focus {
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: start !important;
 }
 
 @media (min-width: 576px) {
