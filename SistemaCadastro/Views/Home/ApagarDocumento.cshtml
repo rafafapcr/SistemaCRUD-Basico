@@ -1,0 +1,54 @@
+﻿@model DocumentoModel
+@{
+    ViewData["Title"] = "Tela de Apagar";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Deseja confirmar a exclusão do seguinte documento?</h1>
+</div>
+
+<form class="row g-3">
+    <div class="col-md-6">
+        <label class="form-label">Código</label>
+        <input type="text" asp-for="Codigo" class="form-control" readonly>
+    </div>
+
+    <div class="col-md-6">
+        <label class="form-label">Data Planejada</label>
+        <input type="text" asp-for="DataPlanejada" class="form-control" readonly>
+    </div>
+
+    <div class="col-12">
+        <br />
+        <label class="form-label">Título</label>
+        <input type="text" asp-for="Titulo" class="form-control" readonly>
+        <br />
+    </div>
+
+    <div class="col-md-6">
+        <label class="form-label">Valor (R$)</label>
+        <input type="text" id="dinheiro" name="dinheiro" class="dinheiro form-control" style="display:inline-block" asp-for="Valor" readonly />
+
+
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputState" class="form-label">Revisão</label>
+        <input type="text" asp-for="Revisao" class="form-control" readonly>
+        <br /><br />
+    </div>
+
+    <br /><br />
+
+    @*<button type="submit" class="btn btn-outline-danger btn-block">Confirmar Exclusão</button>*@
+    <a role="button" class="btn btn-outline-danger btn-block" asp-controller="Home" asp-action="ConfirmarExlusao" asp-route-id="@Model.Id">Confirmar Exclusão</a>
+    <a role="button" class="btn btn-outline-secondary btn-block" asp-controller="Home" asp-action="Index">Cancelar Exclusão</a>
+
+</form>
+
+@section scripts {
+    <script>
+        $('.dinheiro').mask('#.##0,00', { reverse: true });
+    </script>
+
+}

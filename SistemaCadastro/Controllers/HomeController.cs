@@ -18,6 +18,8 @@ namespace SistemaCadastro.Controllers
         {
             _documentoRepositorio = documentoRepositorio;
         }
+
+        // READ
         public IActionResult Index()
         {
             List<DocumentoModel> documentos = _documentoRepositorio.Consulta();
@@ -25,15 +27,35 @@ namespace SistemaCadastro.Controllers
             return View(documentos);
         }
 
-        public IActionResult EditarDocumento()
+        // DELETE
+        public IActionResult ApagarDocumento(int id)
         {
-            return View();
+            DocumentoModel documento = _documentoRepositorio.ListarPorId(id);
+            return View(documento);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+
+        public IActionResult ConfirmarExlusao(int id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            _documentoRepositorio.ExcluirDocumento(id);
+            return RedirectToAction("Index");
         }
+
+        // UPDATE
+        public IActionResult EditarDocumento(int id)
+        {
+            DocumentoModel documento = _documentoRepositorio.ListarPorId(id);
+            return View(documento);
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(DocumentoModel documento)
+        {
+            _documentoRepositorio.AtualizarDocumento(documento);
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }

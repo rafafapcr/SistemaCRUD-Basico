@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DocumentoModel
+@{
     ViewData["Title"] = "Tela de Editar";
 }
 
@@ -6,84 +7,47 @@
     <h1 class="display-4">Editar Documento</h1>
 </div>
 
-<form class="row g-3">
+<form class="row g-3" asp-controller="Home" asp-action="Alterar" method="post">
+    <input type="hidden" asp-for="Id" />
+
     <div class="col-md-6">
-        <label for="codigo" class="form-label">Código</label>
-        <input type="text" class="form-control" placeholder="Digite o código do documento.">
+        <label class="form-label">Código</label>
+        <input type="text" asp-for="Codigo" class="form-control" placeholder="Digite o código do documento.">
     </div>
 
     <div class="col-md-6">
-        <label for="exampleInputPassword1" class="form-label">Data Planejada</label>
-        <input type="date" class="form-control">
+        <label class="form-label">Data Planejada</label>
+        <input type="date" asp-for="DataPlanejada" class="form-control">
     </div>
 
     <div class="col-12">
         <br />
-        <label for="exampleInputPassword1" class="form-label">Título</label>
-        <input type="text" class="form-control" placeholder="Digite o título do documento.">
+        <label class="form-label">Título</label>
+        <input type="text" asp-for="Titulo" class="form-control" placeholder="Digite o título do documento.">
         <br />
     </div>
 
     <div class="col-md-6">
-        <label for="exampleInputPassword1" class="form-label">Valor</label>
-        <input type="number" class="form-control" placeholder="Digite o valor do documento.">
+        <label class="form-label">Valor (R$)</label>
+        <input type="text" asp-for="Valor" class="form-control" placeholder="Digite o valor do documento.">
 
     </div>
 
     <div class="col-md-6">
         <label for="inputState" class="form-label">Revisão</label>
-        <select class="select" multiple id="revisao">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
+        <select class="custom-select" asp-for="Revisao">
+            <option value="0">0</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
         </select>
+        <br /><br />
     </div>
 
+    <button type="submit" class="btn btn-outline-success btn-block">Alterar</button>
 </form>
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button class="btn btn-primary" style="margin-right:25px" type="button">Alterar</button>
-    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
-</div>
 
-
-
-
-@*<form>
-        <div class="mb-3">
-            <label for="codigo" class="form-label">Código</label>
-            <input type="text" class="form-control" placeholder="Digite o código do documento.">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Título</label>
-            <input type="text" class="form-control" placeholder="Digite o título do documento.">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Revisão</label>
-            <br />
-            <select class="form-select" multiple aria-label="multiple select example">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
-
-
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Data Planejada</label>
-            <input type="date" class="form-control">
-        </div>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text">R$</span>
-            <input type="number" class="form-control">
-            <span class="input-group-text">,00</span>
-        </div>
-
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary" type="button">Cadastrar</button>
-        </div>
-    </form>*@

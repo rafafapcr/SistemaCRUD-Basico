@@ -23,6 +23,7 @@ namespace SistemaCadastro.Controllers
             return View();
         }
 
+        //CREATE
         [HttpPost]
         public IActionResult Criar(DocumentoModel documento)
         {

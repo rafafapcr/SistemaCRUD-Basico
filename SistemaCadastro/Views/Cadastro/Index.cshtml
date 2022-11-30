@@ -4,8 +4,9 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cadastro de Documentos</h1>
+    <h1 class="display-4">Cadastrar Documento</h1>
 </div>
+
 
 <form class="row g-3" asp-controller="Cadastro" asp-action="Criar" method="post">
     <div class="col-md-6">
@@ -26,14 +27,14 @@
     </div>
 
     <div class="col-md-6">
-        <label for="exampleInputPassword1" class="form-label">Valor</label>
-        <input type="number" asp-for="Valor" class="form-control" placeholder="Digite o valor do documento.">
-
+        <label for="exampleInputPassword1" class="form-label">Valor (R$)</label>
+        @*<input type="" asp-for="Valor" class="form-control" placeholder="Digite o valor do documento.">*@
+        <input type="text" id="dinheiro" name="dinheiro" class="dinheiro form-control" style="display:inline-block" asp-for="Valor" placeholder="Digite o valor do documento."  />
     </div>
 
     <div class="col-md-6">
         <label for="inputState" class="form-label">Revisão</label>
-        <select class="select" asp-for="Revisao" multiple id="revisao">
+        <select class="custom-select" asp-for="Revisao">
             <option value="0">0</option>
             <option value="A">A</option>
             <option value="B">B</option>
@@ -43,49 +44,16 @@
             <option value="F">F</option>
             <option value="G">G</option>
         </select>
+        <br /><br />
     </div>
 
-    <button type="submit" class="btn btn-outline-success btn-block" >Cadastrar</button>
+    <button type="submit" class="btn btn-outline-success btn-block">Cadastrar</button>
 
 </form>
 
+@section scripts {
+    <script>
+        $('.dinheiro').mask('#.##0,00', { reverse: true });
+    </script>
 
-
-
-@*<form>
-    <div class="mb-3">
-        <label for="codigo" class="form-label">Código</label>
-        <input type="text" class="form-control" placeholder="Digite o código do documento.">
-    </div>
-
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Título</label>
-        <input type="text" class="form-control" placeholder="Digite o título do documento.">
-    </div>
-
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Revisão</label>
-        <br />
-        <select class="form-select" multiple aria-label="multiple select example">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>
-
-
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Data Planejada</label>
-        <input type="date" class="form-control">
-    </div>
-
-    <div class="input-group mb-3">
-        <span class="input-group-text">R$</span>
-        <input type="number" class="form-control">
-        <span class="input-group-text">,00</span>
-    </div>
-
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary" type="button">Cadastrar</button>
-    </div>
-</form>*@
+}
