@@ -6334,11 +6334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafaela.pessoa\\source\\repos\\ProfitsConsulting\\TesteRafaela\\SistemaCadastro\\SistemaCadastro.csproj",
+      "projectUniqueName": "C:\\Users\\rafaela.pessoa\\Source\\Repos\\SistemaCRUD-Basico\\SistemaCadastro\\SistemaCadastro.csproj",
       "projectName": "SistemaCadastro",
-      "projectPath": "C:\\Users\\rafaela.pessoa\\source\\repos\\ProfitsConsulting\\TesteRafaela\\SistemaCadastro\\SistemaCadastro.csproj",
+      "projectPath": "C:\\Users\\rafaela.pessoa\\Source\\Repos\\SistemaCRUD-Basico\\SistemaCadastro\\SistemaCadastro.csproj",
       "packagesPath": "C:\\Users\\rafaela.pessoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafaela.pessoa\\source\\repos\\ProfitsConsulting\\TesteRafaela\\SistemaCadastro\\obj\\",
+      "outputPath": "C:\\Users\\rafaela.pessoa\\Source\\Repos\\SistemaCRUD-Basico\\SistemaCadastro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
